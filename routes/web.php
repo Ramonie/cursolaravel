@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/empresa', function(){
+    return view('site/empresa');
+});
+Route::any('/any', function(){
+    return "Permite todo tipo de acesso http";
+});
+Route::match(['get','post'],'/match', function(){
+    return "Apenas acessos definidos";
+});
+Route::get('/produto/{id}/{cat}', function($id, $cat){
+    return "O id do produto é: ".$id."<br>"."A categoria é: ".$cat;
+});
