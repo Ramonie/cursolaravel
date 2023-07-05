@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,9 +12,14 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
 
-Route::get('/', function () {
+
+Route::get('/',[ProdutoController::class,'index'])-> name('produto.index');
+Route::get('/produto/{id}',[ProdutoController::class, 'show'])->name('produto.show');
+*/
+Route::resource('produtos', ProdutoController::class);
+
+/*Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/empresa', function(){
@@ -28,9 +34,9 @@ Route::match(['get','post'],'/match', function(){
 Route::get('/produto/{id}/{cat}', function($id, $cat){
     return "O id do produto é: ".$id."<br>"."A categoria é: ".$cat;
 });
-/*Route::get('/sobre', function(){
+Route::get('/sobre', function(){
     return redirect('/empresa');
-});*/
+
 Route::redirect('/sobre', '/empresa');
 Route::view('/empresa', 'site/empresa');
 
@@ -41,3 +47,4 @@ Route::get('/news', function(){
 Route::get('/novidades', function(){
     return redirect()->route('noticias');
 });
+});*/
