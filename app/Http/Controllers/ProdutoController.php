@@ -11,7 +11,9 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return "index";
+        $produtos = \App\Models\Produto::all();
+        return dd($produtos);
+
     }
 
     /**
