@@ -10,5 +10,7 @@ class Produto extends Model
     use HasFactory;
     //nome da tabela
     protected $table = 'produtos';
+    // No arquivo de migração da tabela produtos
+
     
 }

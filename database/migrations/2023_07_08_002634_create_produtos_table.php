@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
-            $table->string('nomee');
+           
+            $table->string('nome')->default('Nome do Produto');
+
             $table->text('descricao');
             $table->double('preco', 10, 2);
             $table->string('slug');
@@ -24,6 +26,8 @@ return new class extends Migration
 
             $table->unsignedBigInteger('id_categoria');
             $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');
+
+            
 
             
             $table->timestamps();
