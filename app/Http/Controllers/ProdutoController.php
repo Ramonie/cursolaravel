@@ -20,7 +20,7 @@ class ProdutoController extends Controller
         $html = "<h1>Olá eu sou o h1</h1>";
 
         //return view('news', ['nome'=> $nome,'idade'=> $idade, 'html' => $html ]);
-        return view('news', compact('nome', 'idade', 'html'));
+        return view('site.home', compact('nome', 'idade', 'html'));
     }
 
     /**
