@@ -17,10 +17,12 @@ class ProdutoController extends Controller
         //Passando dados para a view
         $nome = 'Ramonie';
         $idade = 24;
+        $frutas = ['banana', 'maça','laranja'];
         $html = "<h1>Olá eu sou o h1</h1>";
 
         //return view('news', ['nome'=> $nome,'idade'=> $idade, 'html' => $html ]);
-        return view('site.home', compact('nome', 'idade', 'html'));
+        return view('site.home', compact('nome', 'idade', 'html','frutas'));
+        
     }
 
     /**

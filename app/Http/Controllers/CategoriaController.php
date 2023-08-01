@@ -12,7 +12,12 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $nome = 'Ramonie';
+        $idade = 24;
+        $html = "<h1>Olá eu sou o h1</h1>";
+
+        //return view('news', ['nome'=> $nome,'idade'=> $idade, 'html' => $html ]);
+        return view('site.empresa', compact('nome', 'idade', 'html'));
     }
 
     /**

@@ -13,7 +13,36 @@
     @auth
      Está autenticado   
     @endauth
-    Não está autenticado
+    Não está autenticado<br>
+
+
+    {{--Estruturas  de repetição--}}
+    {{--@for ($i = 0; $i <= 10; $i++)
+        valor atual é {{$i}}<br>
+    @endfor
+    
+    @php $i =0; @endphp
+
+    @while ($i <=15)
+    valor atual é {{$i}}<br>
+    @php $i++@endphp
+    @endwhile 
+   
+    @endfor
+
+
+    --- Passando um array no controller ------
+    @foreach ($frutas as $frutas)
+        {{$frutas}} <br>        
+    @endforeach
+
+    @forelse ($frutas as $frutas)
+        {{$frutas}} <br>    
+    @empty
+        array está vazio 
+    @endempty    
+    @endforeach--}}
+
 
 
 @endsection
