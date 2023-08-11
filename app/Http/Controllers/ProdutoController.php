@@ -18,7 +18,7 @@ class ProdutoController extends Controller
        
 
         //return view('news', ['nome'=> $nome,'idade'=> $idade, 'html' => $html ]);
-        $produtos = Produto::all();
+        $produtos = Produto::paginate(4);
         return view('site.home', compact('produtos'));
         
     }

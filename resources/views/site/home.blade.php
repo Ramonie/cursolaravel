@@ -19,7 +19,7 @@
     </div>
     @endforeach
    </div>
-
+   <div class="row center">{{$produtos->links('custom.pagination')}}</div>
 
     {{--Isso é um comentário--}}
 
