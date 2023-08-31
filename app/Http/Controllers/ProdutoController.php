@@ -18,6 +18,8 @@ class ProdutoController extends Controller
        
 
         //return view('news', ['nome'=> $nome,'idade'=> $idade, 'html' => $html ]);
+   
+        $slug = 'slug';
         $produtos = Produto::paginate(4);
         return view('site.home', compact('produtos'));
         
@@ -44,7 +46,7 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-
+      
     }
 
     /**

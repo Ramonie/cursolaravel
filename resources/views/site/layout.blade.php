@@ -14,7 +14,7 @@
     <div class="nav-wrapper container">
       <a href="#" class="brand-logo center">Tech Solutions</a>
       <ul id="nav-mobile" class="left">
-        <li><a href="sass.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="badges.html">Carrinho</a></li>
       </ul>
     </div>
