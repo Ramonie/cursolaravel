@@ -4,7 +4,7 @@
 
 <div class="row container">
     <div class="col s12 m6">
-      <img src="  {{$produtos->imagem}}" class="responsive-img">
+        <img src="{{$produtos->imagem}}" class="responsive-img">
     </div>
 
     <div class="col s12 m6">
@@ -15,5 +15,3 @@
 </div>
 
 @endsection
-
-

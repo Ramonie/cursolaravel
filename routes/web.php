@@ -22,7 +22,11 @@ Route::get('/produto/{id}',[ProdutoController::class, 'show'])->name('produto.sh
 Route::resource('produtos', ProdutoController::class);
 Route::resource('categorias', CategoriaController::class);
 Route::get('/', [SiteController::class, 'index'])->name('site.index'); 
-Route::get('/produtos/{id}', [SiteController::class, 'details'])->name('site.details');
+Route::get('/produtos/{id}', [SiteController::class,'details'])->name('site.details');
+
+
+
+
 
 
 /*Route::get('/', function () {

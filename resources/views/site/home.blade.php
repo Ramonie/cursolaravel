@@ -8,10 +8,12 @@
         <div class="card">
             <div class="card-image">
               <img src="{{ $produto->imagem }}">
-              <span class="card-title">{{ $produto->nome }}</span>
+              <span class="card-title">{{ Str::limit($produto->nome, 20) }}</span>
              
-              <a href="{{ route('site.details', $produto->id) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-
+              <a href="{{route('site.details',$produto->id)}}" class="btn-floating halfway-fab waves-effect waves-light red">
+                <i class="material-icons">add</i>
+            </a>
+            
       
             </div>
             <div class="card-content">

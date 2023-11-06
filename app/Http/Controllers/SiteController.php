@@ -18,10 +18,12 @@ class SiteController extends Controller
         return view('site.home', compact('produtos'));
         
     }
-    public function details($id) {
+    public function details($id)
+    {
         $produto = Produto::findOrFail($id);
-        return view('site.details', compact('produtos'));
+        return view('site.details', compact('produto'));
     }
+    
     
     
 }
